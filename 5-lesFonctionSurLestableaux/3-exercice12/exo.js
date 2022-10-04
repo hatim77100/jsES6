@@ -3,6 +3,13 @@ let tab = [
     {nom : "Toto", age : 22},
     {nom : "Milo", age : 32},
     {nom : "Mina", age : 32},
-]
-let ntab = tab.pop([2])
-console.log(ntab);
+];
+
+function retourneIndextab(nom) {
+   return tab.findIndex((perso)=> {
+        return perso.nom === nom;
+    });
+}
+
+tab.splice(retourneIndextab("Mina"),1);
+console.log(tab);
