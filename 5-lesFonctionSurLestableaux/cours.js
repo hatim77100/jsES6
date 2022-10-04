@@ -23,8 +23,25 @@ const index = notes.findIndex(function(note) {
 
 // La fonction find()
 const persos = [
-    ["Tya",5, 10, 15, 24]
-    ["Toto",8, 15, 12, 25]
+    ["Tya", 5, 10, 15, 24],
+    ["Toto",8, 15, 12, 25],
     ["Milo",9, 11, 7, 28]
 ];
+const valeur = persos.find(function (perso) {
+    return perso[0] === "Toto";
+})
+// console.log(valeur);
 
+// La fonction entries():
+
+const personneNotes = [5, 10, 15, 20];
+// let notesEntries = personneNotes.entries();
+// console.log(notesEntries.next());
+for (let [index, value] of personneNotes.entries()) {
+    // console.log(`Note ${index} : ${value}`);
+}
+
+// La fonction include() return un boolean:
+const noms = ["hatim", "adham", "melanie"];
+let inclus = noms.includes("adham");
+console.log(inclus);
