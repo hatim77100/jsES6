@@ -15,6 +15,7 @@ let notes = [
   [5, 10, 15, 20],
   [2, 4, 6],
 ];
+
 const additionerTab = (tab1, tab2) => {
   let taille = tab1.length;
   if (tab1.length < tab2.length) taille = tab2.length;
