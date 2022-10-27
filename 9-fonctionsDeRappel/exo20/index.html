@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./exo20.js" defer></script>
+    <title>Document</title>
+
+    <style>
+       .mt {
+        margin-top: 20px;
+       }
+       .mt-4 {
+        margin-top: 1rem;
+       }
+       .block {
+        display: block;
+       }
+       .inline-block {
+        display: inline-block;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <label for="">Saisir le nombre 1 : </label>
+            <input type="number">
+        </div>
+        <div class="mt">
+            <label for="">Saisir le nombre 2 : </label>
+            <input type="number">
+        </div>
+        <select class="mt-4">
+            <option>
+                Multiplication
+            </option>
+            <option>
+                Division
+            </option>
+            <option>
+                Soustraction
+            </option>
+            <option>
+                addition
+            </option>
+        </select>
+        <button type="submit" class="block mt-4">Valider</button>
+        <div id="resultat" class="inline-block">
+            <div style="color:green; border:2px solid green">
+                Le résultat est <span id="span1"></span>
+            </div>
+            <div style="color:red; border:2px solid red">
+                Le résultat est <span id="span1"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
