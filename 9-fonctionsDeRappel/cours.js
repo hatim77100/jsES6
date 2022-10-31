@@ -11,4 +11,4 @@ const multiplication = (x,y) => x*y;
 
 const calcul = calculPar3(5,multiplication);
 
-console.log(calcul);
+console.log();

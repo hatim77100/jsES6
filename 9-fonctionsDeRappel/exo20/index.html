@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
     <script src="./exo20.js" defer></script>
     <title>Document</title>
 
     <style>
-       .mt {
+      .mt {
         margin-top: 20px;
-       }
-       .mt-4 {
+      }
+      .mt-4 {
         margin-top: 1rem;
-       }
-       .block {
+      }
+      .block {
         display: block;
-       }
-       .inline-block {
+      }
+      .hidden {
+        display: none;
+      }
+      .myStyle {
+        margin-top: 1rem;
         display: inline-block;
-       }
+        padding: 1rem;
+        font-size: x-large;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <div>
-            <label for="">Saisir le nombre 1 : </label>
-            <input type="number">
+      <div>
+        <label for="">Saisir le nombre 1 : </label>
+        <input type="number" id="number1"/>
+      </div>
+      <div class="mt">
+        <label for="">Saisir le nombre 2 : </label>
+        <input type="number" id="number2"/>
+      </div>
+      <select class="mt-4" id="options">
+        <option value="1">Multiplication</option>
+        <option value="2">Division</option>
+        <option value="3">Soustraction</option>
+        <option value="4">addition</option>
+        <option value="5">puissance</option>
+      </select>
+      <button type="submit" class="block mt-4" id="button">Valider</button>
+      <div>
+        <div id="divResultat">
+         
         </div>
-        <div class="mt">
-            <label for="">Saisir le nombre 2 : </label>
-            <input type="number">
+        <div style="color: red; border: 2px solid red; display: none" id="redResultat">
+          Calcul non pris en compte
         </div>
-        <select class="mt-4">
-            <option>
-                Multiplication
-            </option>
-            <option>
-                Division
-            </option>
-            <option>
-                Soustraction
-            </option>
-            <option>
-                addition
-            </option>
-        </select>
-        <button type="submit" class="block mt-4">Valider</button>
-        <div id="resultat" class="inline-block">
-            <div style="color:green; border:2px solid green">
-                Le résultat est <span id="span1"></span>
-            </div>
-            <div style="color:red; border:2px solid red">
-                Le résultat est <span id="span1"></span>
-            </div>
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
