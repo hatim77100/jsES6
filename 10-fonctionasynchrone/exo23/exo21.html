@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="start">Start</button>
+    <h1 id="calcul" style="display: none">Combien vaut 5 * 3 ?</h1>
+    <div id="compteur" style="font-size: 25px; color: red"></div>
+
+    <script>
+      const buttonStart = document.querySelector("#start");
+      const h1Calcul = document.querySelector("#calcul");
+      const divCompteur = document.querySelector("#compteur");
+
+      buttonStart.addEventListener("click", () => {
+        h1Calcul.removeAttribute("style");
+       startTimer(5);
+      });
+
+      function monTimer(timer) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(`${timer} secondes`);
+          }, 1000);
+        });
+      }
+
+      async function startTimer(seconde) {
+        for (let i = 0; i < seconde; i++) {
+         divCompteur.textContent = await monTimer(seconde - i);
+        }
+        divCompteur.textContent = "le resultat est 15"
+      }
+    </script>
+  </body>
+</html>
