@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Saisir le nombre 1 : </label>
+    <input type="number" id="nb1" />
+    <br />
+    <label>Saisir le nombre 2 : </label>
+    <input type="number" id="nb2" />
+    <br />
+    <select id="signe">
+      <option value="+">addition</option>
+      <option value="x">multiplication</option>
+    </select>
+    <br />
+    <button id="btn">Valider</button>
+    <div id="resultat"></div>
+    <script>
+      const inp1 = document.getElementById("nb1");
+      const inp2 = document.getElementById("nb2");
+      const signe = document.getElementById("signe");
+      const resultat = document.getElementById("resultat");
+      const btn = document.getElementById("btn");
+
+      const calcul = {
+        x: inp1.value,
+        y: inp2.value,
+
+        addition: function (x, y) {
+          return x + y;
+        },
+
+        multiplication: function (x, y) {
+          return x * y;
+        },
+
+        affichageCalcul: function (signe) {
+          switch (signe) {
+            case "*":
+            case "X":
+            case "x":
+              return `Le résultat du calcul ${
+                this.x
+              } ${signe} ${this.y} = ${this.multiplication(
+                calcul["x"],
+                calcul["y"]
+              )} `;
+              break;
+            case "+":
+              return `Le résultat du calcul ${
+                this.x
+              } ${signe} ${this.y} = ${this.addition(
+                calcul["x"],
+                calcul["y"]
+              )}`;
+          }
+        },
+      };
+
+      btn.addEventListener("click", () => {
+        calcul.x = parseInt(inp1.value);
+        calcul.y = parseInt(inp2.value);
+        resultat.innerHTML = calcul.affichageCalcul(signe.value);
+    });
+    </script>
+  </body>
+</html>
